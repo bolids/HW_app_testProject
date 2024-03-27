@@ -10,6 +10,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         repository: bolids/Tests_for_HW_app_testProject
+        ref: main
         path: tests
 
     - name: Install dependencies
