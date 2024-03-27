@@ -1,0 +1,20 @@
+name: Run tests
+
+on: [push]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout automation framework
+      uses: actions/checkout@v4
+      with:
+        repository: bolids/Tests_for_HW_app_testProject
+        ref: <branch_name>
+        path: tests
+
+    - name: Install dependencies
+      run: cd tests && npm install
+
+    - name: Run tests
+      run: cd tests && npm test
