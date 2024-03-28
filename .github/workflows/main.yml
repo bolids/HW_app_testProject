@@ -6,8 +6,6 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
-    - name: check
-      run: ls -lash && ls -lash ../ && pwd && ls -lash ../../
     - name: Checkout automation framework
       uses: actions/checkout@v4
       with:
@@ -15,10 +13,17 @@ jobs:
         repository: bolids/Tests_for_HW_app_testProject
         path: tests
         ref: refs/heads/main
+    - name: Checkout automation main
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.PAT_BOLIDS }}
+        repository: bolids/HW_app_testProject
+        path: main_p
+        ref: refs/heads/main
         
 
     - name: Install dependencies
-      run: ls -lash && ls -lash ../ && pwd && ls -lash ../../ && cd tests/tests && npm install
+      run: cp -axp main_p/src tests/ && cd tests/tests && npm install
 
     - name: Run tests
       run: cd tests/tests && npm test
