@@ -12,7 +12,7 @@ jobs:
     - name: Checkout automation framework
       uses: actions/checkout@v4    
       with:
-        sparse-checkout: | src
+        sparse-checkout: src
         token: ${{ secrets.PAT_BOLIDS }}
         repository: bolids/Tests_for_HW_app_testProject
         path: tests
