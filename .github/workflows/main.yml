@@ -22,7 +22,7 @@ jobs:
   
 
     - name: Install dependencies
-      run: tests/ && cd tests && npm install
+      run: cd tests && npm install
 
     - name: Run tests
       run: cd tests && npm test
