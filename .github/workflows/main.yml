@@ -16,13 +16,13 @@ jobs:
       with:
         token: ${{ secrets.PAT_BOLIDS }}
         repository: bolids/Tests_for_HW_app_testProject
-       # path: tests
+        path: tests
         ref: refs/heads/main
     
   
 
     - name: Install dependencies
-      run: ls -lash && cd tests && npm install
+      run: ls -lash && cp -axp src tests && cd tests/tests && npm install
 
     - name: Run tests
       run: cd tests && npm test
