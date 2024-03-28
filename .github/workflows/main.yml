@@ -11,6 +11,8 @@ jobs:
     steps:
     - name: Checkout automation main
       uses: actions/checkout@v4
+      with: 
+        path: HW_app_testProject
     - name: Checkout automation framework
       uses: actions/checkout@v4    
       with:
