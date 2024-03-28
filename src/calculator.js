@@ -4,7 +4,6 @@ class Calculator {
 
     add(a, b) {
         return a + b;
-
     };
 
     minus(a, b) {
@@ -28,6 +27,6 @@ class Calculator {
     multiply(a, b) {
         return a * b;
     }
-
 };
+
 export default Calculator;
