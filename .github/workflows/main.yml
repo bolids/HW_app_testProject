@@ -27,7 +27,7 @@ jobs:
 
     - name: Install dependencies
     #  run: cp -axp main_p/src tests/ && cd tests/tests && npm install
-    run: cd tests/tests && npm install
+    run: cp -axp main/src tests/ && cd tests/tests && npm install
 
     - name: Run tests
       run: cd tests && npm test
