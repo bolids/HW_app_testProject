@@ -9,7 +9,7 @@ jobs:
     - name: Checkout automation framework
       uses: actions/checkout@v4
       with:
-        github-token: ${{ secrets.PAT_BOLIDS }}
+        token: ${{ secrets.PAT_BOLIDS }}
         repository: bolids/Tests_for_HW_app_testProject
         ref: refs/heads/main
         
