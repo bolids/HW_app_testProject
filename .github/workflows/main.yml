@@ -15,7 +15,7 @@ jobs:
         
 
     - name: Install dependencies
-      run: ls lash && cd tests && npm install
+      run: ls -lash && cd tests && npm install
 
     - name: Run tests
       run: cd tests && npm test
