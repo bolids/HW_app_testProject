@@ -6,6 +6,8 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
+    - name: check
+      run: ls -lash && ls -lash ../ && pwd && ls -lash ../../
     - name: Checkout automation framework
       uses: actions/checkout@v4
       with:
@@ -16,7 +18,7 @@ jobs:
         
 
     - name: Install dependencies
-      run: ls -lash && cp -axp src tests/ && cd tests/tests && npm install
+      run: ls -lash && ls -lash ../ && pwd && ls -lash ../../ && cd tests/tests && npm install
 
     - name: Run tests
       run: cd tests/tests && npm test
